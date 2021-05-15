@@ -1,0 +1,4 @@
+什么是SpringMVC：MVC是一种设计模式，把模型-视图-控制器分离，职责进行解耦
+优点：集中管理，各种映射，分层设计，组件解耦
+核心：前端控制器dispatcherServlet、处理器映射器handlerMapping、处理器适配器handlerAdapter、处理器handler、视图解析器viewResolver、视图view
+控制器是单例，保证多线程访问安全让他变成无状态的

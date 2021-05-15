@@ -1,0 +1,13 @@
+特点：提供各种starter，开箱即用，简化了参数配置提供默认配置，再也不用担心各种版本间的搭配问题
+核心注解：@SpringBootApplication往下debug可以看到@SpringBootConfiguration实现配置文件的功能、@EnableAutoConfiguration开启自动配置、@ComponentScan组件扫描
+如何写一个Starter：
+依赖spring-boot-starter
+编写属性类
+编写配置类@Configuration，@ConditionalOnClass，@EnableConfigurationProperties（导入属性类）
+META-INF/spring.factories 里定义的自动配置类
+Maven打包
+配置文件加载顺序：properties-yaml-系统环境变量-命令行参数，依次加载后面覆盖前面。
+多个配置文件：启动项里加spring.profiles.active，来激活对于版本的配置
+Security和Shiro：shiro小而精属于轻量级，security功能强大天然集成Srping
+跨域问题：实现WebMvcConfigurer，重写addCorsMappings
+springboot打的jar包和普通jar有什么区别：可执行但是不可以引用，原因是路径多了BOOT-INF/classes。可以在pom文件里面添加spring-boot-maven-plugin插件
